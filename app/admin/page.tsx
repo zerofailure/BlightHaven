@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
 export default async function AdminPage() {
-  const { userId } = auth();
+  const { userId } = await auth();
   if (!userId) redirect("/");
 
   const res = await fetch(`https://api.clerk.dev/v1/users/${userId}`, {
