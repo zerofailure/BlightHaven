@@ -5,20 +5,17 @@ export default async function AdminPage() {
   const { userId } = auth();
   if (!userId) redirect("/");
 
-  const user = await fetch(`https://api.clerk.dev/v1/users/${userId}`, {
-    headers: {
-      Authorization: `Bearer ${process.env.CLERK_SECRET_KEY}`,
-    },
-  }).then(res => res.json());
+  const res = await fetch(`https://api.clerk.dev/v1/users/${userId}`, {
+    headers: { Authorization: `Bearer ${process.env.CLERK_SECRET_KEY}` }
+  });
+  const user = await res.json();
 
-  if (user?.username !== "zero") {
-    redirect("/");
-  }
+  if (user?.username !== "zero") redirect("/");
 
   return (
-    <main className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Welcome, Admin Zero</h1>
-      <p>This is your private WYSIWYG editor panel (coming next).</p>
+    <main style={{ padding: '2rem' }}>
+      <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Admin Panel</h1>
+      <p>You are logged in as zero. Future WYSIWYG controls will go here.</p>
     </main>
   );
 }

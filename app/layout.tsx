@@ -1,29 +1,17 @@
-import type { Metadata } from "next";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
-import "../src/index.css";
+import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import "./globals.css";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Blighthaven",
-  description: "Blighthaven MMO UI Shell",
+  description: "Blighthaven MMO Shell",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider>
       <html lang="en">
         <body>
-          <header className="p-2 bg-slate-800 border-b border-slate-700 flex justify-between">
+          <header style={{ padding: '1rem', backgroundColor: '#1e293b', color: 'white', display: 'flex', justifyContent: 'space-between' }}>
             <SignedOut>
               <SignInButton /> <SignUpButton />
             </SignedOut>
