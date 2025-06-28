@@ -1,8 +1,17 @@
-export default function HomePage() {
+// app/page.tsx or app/(unauth)/page.tsx
+
+'use client'
+
+import { builder, BuilderComponent } from '@builder.io/react'
+import '@builder.io/widgets/dist/lib/builder-widgets-async'
+
+// Connect your public Builder.io API Key
+builder.init('b6ace528dbef4807913eeec6d635af5c')
+
+export default function Page() {
   return (
-    <main style={{ padding: '2rem' }}>
-      <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Welcome to Blighthaven</h1>
-      <p>This is your main game shell. Log in as 'zero' to access the admin panel.</p>
-    </main>
-  );
+    <div>
+      <BuilderComponent model="page" />
+    </div>
+  )
 }
