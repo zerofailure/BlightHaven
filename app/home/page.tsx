@@ -1,5 +1,5 @@
 import { builder } from '@builder.io/react';
-import BuilderPage from '@/components/BuilderPage';
+import { BuilderPage } from '@/components/BuilderPage';
 
 export const revalidate = 5;
 
