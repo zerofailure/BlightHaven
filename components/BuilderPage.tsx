@@ -1,7 +1,17 @@
-'use client';
+'use client'
 
-import { BuilderComponent } from '@builder.io/react';
+import { BuilderComponent, useIsPreviewing } from '@builder.io/react'
 
-export function BuilderPage({ content }: { content: any }) {
+interface Props {
+  content: any
+}
+
+export function BuilderPage({ content }: Props) {
+  const isPreviewing = useIsPreviewing();
+
+  if (!content && !isPreviewing) {
+    return <div>Content not found</div>;
+  }
+
   return <BuilderComponent model="page" content={content} />;
 }
