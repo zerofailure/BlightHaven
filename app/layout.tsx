@@ -6,7 +6,7 @@ import '@builder.io/widgets';
 import type { Metadata } from 'next';
 
 // Initialize Builder.io
-builder.init('YOUR_PUBLIC_API_KEY'); // Replace with your Builder.io public API key
+builder.init('b6ace528dbef4807913eeec6d635af5c'); // Replace with your Builder.io public API key
 
 export const metadata: Metadata = {
   title: 'BlightHaven',
