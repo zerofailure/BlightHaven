@@ -22,7 +22,7 @@
     "@tiptap/extension-table-row": "^x.x.x",
     "@tiptap/extension-table-cell": "^x.x.x",
     "@tiptap/extension-table-header": "^x.x.x",
-    "@builder.io/react": "^4.5.5",
+    "@builder.io/react": "^1.4.5",
     "@builder.io/widgets": "^3.0.0"
 
   },
