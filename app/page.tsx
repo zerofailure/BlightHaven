@@ -2,7 +2,7 @@
 
 'use client'
 
-import { builder, BuilderComponent } from '@builder.io/react'
+import { builder, BuilderComponent } from 'react'
 import '@builder.io/widgets/dist/lib/builder-widgets-async'
 
 // Connect your public Builder.io API Key
