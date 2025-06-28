@@ -1,6 +1,6 @@
 'use client'
 
-import { BuilderComponent, useIsPreviewing } from '@builder.io/react'
+import { BuilderComponent, useIsPreviewing } from 'react'
 
 interface Props {
   content: any
