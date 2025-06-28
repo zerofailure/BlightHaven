@@ -21,7 +21,10 @@
     "@tiptap/extension-table": "^x.x.x",
     "@tiptap/extension-table-row": "^x.x.x",
     "@tiptap/extension-table-cell": "^x.x.x",
-    "@tiptap/extension-table-header": "^x.x.x"
+    "@tiptap/extension-table-header": "^x.x.x",
+    "@builder.io/react": "^4.5.5",
+    "@builder.io/widgets": "^3.0.0"
+
   },
     "devDependencies": {
     "typescript": "^5.4.5",
