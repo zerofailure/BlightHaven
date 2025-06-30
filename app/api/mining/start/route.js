@@ -1,1 +1,1 @@
-export async function POST(req) { ... }
+import { auth } from '@clerk/nextjs'; import { connectDB } from '@/lib/db'; import OreSession from '@/models/OreSession'; export async function POST(req) { const { userId } = auth(); const { oreId } = await req.json(); await connectDB(); await OreSession.findOneAndUpdate({ userId }, { oreId, startTime: new Date() }, { upsert: true }); return Response.json({ status: 'started', oreId }); }

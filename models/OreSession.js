@@ -1,1 +1,1 @@
-const OreSessionSchema = new mongoose.Schema(...)
+import mongoose from 'mongoose'; const OreSessionSchema = new mongoose.Schema({ userId: String, oreId: String, startTime: Date }); export default mongoose.models.OreSession || mongoose.model('OreSession', OreSessionSchema);

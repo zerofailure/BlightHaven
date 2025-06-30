@@ -1,1 +1,1 @@
-export default function AdminPage() { ... }
+export default function AdminPage() { return <div className='p-4 text-white'>Admin Panel (placeholder)</div>; }

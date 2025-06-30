@@ -1,1 +1,1 @@
-const UserInventorySchema = new mongoose.Schema(...)
+import mongoose from 'mongoose'; const InventoryItemSchema = new mongoose.Schema({ itemId: String, quantity: Number }, { _id: false }); const UserInventorySchema = new mongoose.Schema({ userId: { type: String, unique: true }, gold: Number, inventory: [InventoryItemSchema], equipment: { type: Map, of: String }, lastLogin: Date, lastAction: Date }); export default mongoose.models.UserInventory || mongoose.model('UserInventory', UserInventorySchema);

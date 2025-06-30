@@ -1,1 +1,1 @@
-export async function GET() { ... }
+import { auth } from '@clerk/nextjs'; import { connectDB } from '@/lib/db'; import UserInventory from '@/models/UserInventory'; export async function GET() { const { userId } = auth(); await connectDB(); const player = await UserInventory.findOne({ userId }); return Response.json(player?.inventory || []); }
