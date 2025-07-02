@@ -1,9 +1,8 @@
-// app/layout.tsx
-import "../app/builder/builder"; // 👈 Ensure Builder custom components are registered
+import "./globals.css";
+import "./builder/builder";
 import { ClerkProvider } from "@clerk/nextjs";
-import "../globals.css";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
@@ -12,3 +11,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </ClerkProvider>
   );
 }
+
