@@ -1,3 +1,7 @@
+// BlightHaven Alpha Deployment - Sign-Up Page
+
+// Ensure this file is located at: app/sign-up/[[...index]]/page.tsx
+
 import { SignUp } from "@clerk/nextjs";
 
 export default function SignUpPage() {
@@ -7,3 +11,4 @@ export default function SignUpPage() {
     </div>
   );
 }
+
