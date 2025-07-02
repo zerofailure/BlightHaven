@@ -1,5 +1,5 @@
 // app/layout.tsx
-import "./builder/builder"; // 👈 Ensure Builder custom components are registered
+import "../app/builder/builder"; // 👈 Ensure Builder custom components are registered
 import { ClerkProvider } from "@clerk/nextjs";
 import "../globals.css";
 
