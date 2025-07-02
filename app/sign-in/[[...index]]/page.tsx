@@ -1,8 +1,4 @@
-// BlightHaven Alpha Deployment - Sign-In Page Fix
-
-// Ensure this file is located at: app/sign-in/[[...index]]/page.tsx
-
-import { SignIn } from '@clerk/nextjs';
+import { SignIn } from "@clerk/nextjs";
 
 export default function SignInPage() {
   return (

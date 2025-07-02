@@ -1,4 +1,3 @@
-// Root-level middleware.ts
 import { authMiddleware } from "@clerk/nextjs";
 
 export default authMiddleware({
@@ -6,7 +5,5 @@ export default authMiddleware({
 });
 
 export const config = {
-  // Ensures we don’t interfere with Next.js internals
   matcher: ["/((?!_next|.*\\..*).*)"],
 };
-
