@@ -9,7 +9,7 @@ Builder.registerComponent(
   dynamic(() => import("@clerk/nextjs").then(mod => mod.UserButton)),
   {
     name: "UserButton",
-    image: "https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F2f2a6a06308044c7926d0bfb269d45e3", // optional icon
+    image: "https://cdn.builder.io/api/v1/image/assets%2Fb6ace528dbef4807913eeec6d635af5c%2F8b574660eaef4221889a64a8d8407305", // optional icon
     inputs: [],
   }
 );
