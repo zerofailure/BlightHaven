@@ -1,10 +1,21 @@
-export default function MainPage() {
-  return (
-    <main className="flex items-center justify-center h-screen">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold">Welcome to BlightHaven Alpha</h1>
-        <p>Please sign in to continue.</p>
-      </div>
-    </main>
-  );
+'use client';
+
+import { BuilderComponent, builder } from '@builder.io/react';
+import { useEffect, useState } from 'react';
+
+builder.init('b6ace528dbef4807913eeec6d635af5c');
+
+export default function CatchAllRenderer() {
+  const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    builder
+      .get('page', { url: window.location.pathname })
+      .toPromise()
+      .then((res) => setContent(res));
+  }, []);
+
+  if (!content) return <div>Loading...</div>;
+
+  return <BuilderComponent model="page" content={content} />;
 }
