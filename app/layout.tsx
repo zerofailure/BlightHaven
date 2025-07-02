@@ -1,4 +1,3 @@
-//import "./globals.css";
 import "./builder/builder";
 import { ClerkProvider } from "@clerk/nextjs";
 
