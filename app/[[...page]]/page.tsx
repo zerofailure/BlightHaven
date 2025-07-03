@@ -4,8 +4,7 @@
 import { BuilderComponent, builder } from "@builder.io/react";
 import { useEffect, useState } from "react";
 
-// Set your public Builder.io API key
-builder.init("b6ace528dbef4807913eeec6d635af5c");
+// No need to init here anymore - it's done in builder.tsx
 
 export default function CatchAllBuilderPage({ params }) {
   const slug = "/" + (params?.page?.join("/") || "");
@@ -24,4 +23,3 @@ export default function CatchAllBuilderPage({ params }) {
 
   return <BuilderComponent model="page" content={content} />;
 }
-
