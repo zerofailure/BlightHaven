@@ -1,6 +1,11 @@
-"use client";
-import "../app/builder/builder"; // adjust path if needed
+'use client';
+import { Builder } from '@builder.io/react';
+import GoldDisplay from '@/components/GoldDisplay';
 
-export default function BuilderRegistryClient() {
-  return null; // just needed for side effect of import
-}
+Builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
+
+Builder.registerComponent(GoldDisplay, {
+  name: 'Gold Display',
+  inputs: [],         // add inputs as needed
+  models: ['page', 'section'],
+});
